@@ -1,4 +1,4 @@
 #message={Added VBN motion and various internal components reworked. BREAKING CHANGES included. See changes.txt for more}
-#url1=https://github.com/vnmsimulation/ui/releases/download/v4.2.1.2/VNMConfig.exe
+#url1=https://github.com/vnmsimulation/ui/raw/main/v4.2.1.2/VNMConfig.exe
 #method=0 (self-upgrade)
 #version=4.2.1.2
