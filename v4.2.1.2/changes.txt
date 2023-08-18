@@ -1,0 +1,201 @@
+13/08/2023 4.2.1.2
++ Added: Max Pulse per Loop option to Motion page
+
+12/08/2023 4.2.1.2
++ Added: A mechanism to disable/enable buttons for a specific amount of time
+* Fixed: Attempted to fix EOSError Exception (5) on Motion page
+
+06/08/2023 4.2.1.2
+* Fixed: Optimized DirectDrive detection function
+* Fixed: Wheel rotation issue on DirectDrive tab
+* Fixed: Integer overflow issue when mapping large numbers
+
+04/08/2023 4.2.1.2
++ Added: Apply function to Motion page
+
+03/08/2023 4.2.1.2
+* Fixed: Scaling issue with wheel image on DirectDrive tab
++ Added: Higher actuator pwm frequencies
+* Fixed: Set default actuator state to unknown (-1)
+
+02/08/2023 4.2.1.2
++ Added: Belt Tensioner config handler
+* Fixed: Increased number of actuators to 9 and re-designed motion page
+
+30/07/2023 4.2.0.1
+* Fixed: Info text on statusbar not changed when switching between tabs
+* Fixed: Improved DeviceType and icon mapping
+
+27/07/2023 4.2.0.1
+* Fixed: Incorrect Motion page index
+
+24/07/2023 4.2.0.1
+* Fixed: Checks added to avoid flickering when applying actuator states
+
+16/07/2023 4.2.0.1
+* Fixed: Suppressed EOSError exception
+
+11/07/2023 4.2.0.1
+* Fixed: Version not properly shown on Button box tab
++ Added: Configuration save/applyy function to Button box
+
+10/07/2023 4.2.0.1
+* Fixed: Swapped all Led configuration with TLEDPanel
+
+08/07/2023 4.2.0.1
+* Fixed: Optimized button matrix generator
+
+06/07/2023 4.2.0.1
+* Fixed: LED effects calculation refactored
++ Added: Handlers to Button box device
+
+05/07/2023 4.2.0.1
++ Added: PARK & CENTERING state to Motion device status
++ Added: Basic Button box page
+
+28/05/2023 4.1.0.3
+* Fixed: Optimized profiles feature on both Base and DirectDrive tabs
++ Added: Reverse force check to Direct Drive tab
+
+25/05/2023 4.1.0.3
++ Added: Implemented packet communication channels between forms
+
+24/05/2023 4.1.0.3
+* Fixed: RTTI issue causing invalid json serialization/deserialization
++ Fixed: Angle inputs not properly associated with relevant trackbars
+
+23/05/2023 4.1.0.3
++ Added: Max Torque Mode implemented
+
+21/05/2023 4.1.0.3
+* Fixed: Wheelrotation not working properly on Direct Drive tab
++ Added: IsDirectDrive check
+* Fixed: Implemented shared packet handler between Base and Direct Drive 
+
+19/05/2023 4.1.0.3
++ Added: Various components implemented on Direct Drive tab
+
+18/05/2023 4.1.0.3
+* Fixed: Changed axis_max from 100k to 2^23 when a Direct Drive is detected
+
+13/05/2023 4.1.0.3
++ Added: Internal servo configuration capabilities 
+
+10/05/2023 4.1.0.3
++ Added: Telemetry data can be sent to wheel devices when Wheel tab is active
+* Fixed: Changed Joystick report data structure. 
+This is a BREAKING CHANGE that breaks Wheelbase/Pedal feature within Wheelbase. 
+Please update the wheelbase firmware or use older UI versions.
+Standalone Pedals will not be affected.
+* Fixed: Re-arranged Hardware tab with PID Controller removed
+
+15/04/2023 4.1.0.2
+* Fixed: Changed Sample time from uint32_t to float
+* Fixed: Increased decimal places for some values from 2 to 10 
+
+15/03/2023 4.1.0.2
+* Fixed: Combined clutch deadzone not properly set
+* Fixed: Wheel config not set to default on applying configuration
+
+13/03/2023 4.1.0.1
+* Fixed: Duplicated tab ids leading to unwanted packet handling behaviors 
+
+07/03/2023 4.1.0.1
+* Fixed: Color dialog not properly displayed with borderstyle of bsSingle
+
+06/03/2023 4.1.0.1
+* Fixed: SendQueue issue on wheel handler
+
+05/03/2023 4.1.0.1
+* Fixed: An issue where a timer on motion page is taking effect on other tabs as well
++ Added: Implemented wheel clutch/paddle calibration
+
+04/03/2023 4.1.0.1
++ Added: Implemented wheel related procedures
+
+27/02/2023 4.0.1.2
++ Added: Fully designed wheel page
+
+19/02/2023 4.0.1.1
++ Added: Hints on some components on Motion page
+
+18/02/2023 4.0.1.1
++ Added: Implemented basic wheel device
++ Added: Wheel tab for VNM Steering Wheels
+* Fixed: Motion page reworked
+
+16/02/2023 4.0.0.1
+* Fixed: A 3-second-timeout applied when a new wheelbase is connected
+
+12/02/2023 4.0.0.1
+* Fixed: Base; wheel animation center adjusted
+
+02/02/2023 4.0.0.1
++ Added: Some internal procedures for VNM Direct Drive & BLE devices
+
+28/01/2023 4.0.0.1 
++ Added: Implemented new SEQ shifter calibration function
+
+25/01/2023 4.0.0.1 
++ Added: Implemented new SEQ shifter related procedures
+
+24/01/2023 4.0.0.1
+* Fixed: Modified shifter UI to support new SEQ shifter
+
+22/01/2023 4.0.0.1 
++ Added: Disabled led related options when Enable LED effects is unchecked
+
+18/01/2023 4.0.0.1 
+* Fixed: Device list not updated correctly due to an issue with device events 
+
+15/01/2023 4.0.0.1 
+* Fixed: Optimized device message routing
+
+14/01/2023 4.0.0.1 
+* Fixed: Notification delay issue causing the UI to freeze
+
+13/01/2023 4.0.0.1 
+* Fixed: Updated motion device config struct
+
+08/01/2023 4.0.0.1 
+* Fixed: Replaced some more icons
+* Fixed: Trackbar hint on wheel animation form not working properly
+
+06/01/2023 4.0.0.1 
++ Added: Device event bus and message interface
+* Fixed: Fully replaced VNM Device class with new one
+
+03/01/2023 4.0.0.1
+* Fixed: ActiveTheme not properly set when switching between themes
+* Fixed: Replaced VNM Wheelbase image on Base tab
+
+02/01/2023 4.0.0.1
+* Fixed: VNM Device class reworked
+
+28/12/2022 4.0.0.1
+* Fixed: Incorrect Run/Park behavior of motion device
++ Added: Implemented motion device packet handler
+
+22/12/2022 3.5.0.1
+* Fixed: Replaced some button icons
+
+21/12/2022 3.5.0.1
+* Fixed: Custom hint reworked
+
+18/12/2022 3.5.0.1
+* Fixed: Trackbar hints not properly shown
++ Added: Motion device packet handlers
+
+7/12/2022 3.5.0.1
++ Added: Implemented motion device 
+
+14/12/2022 3.5.0.1
+* Fixed: Some icons added to buttons
++ Added: Motion page & related components
+
+12/12/2022 3.5.0.1
+* Fixed: Move packet related functions to device class
+* Fixed: Custom python version option not taking effect
+
+10/12/2022 3.5.0.1
+* Fixed: Incorrect tags of some tabs

@@ -1,4 +1,4 @@
-#message={Fixed pedal freezing issue. See changes.txt for more}
+#message={Added VBN motion and various internal components reworked. BREAKING CHANGES included. See changes.txt for more}
 #url1=https://raw.githubusercontent.com/hoantv/CarSimulatorFirmware/master/ui/v3.4.0.2/VNMConfig.exe
 #method=0 (self-upgrade)
-#version=3.4.0.3
+#version=4.2.1.2
