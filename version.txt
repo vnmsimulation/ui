@@ -1,4 +1,4 @@
-#message={Added VNM motion and various internal components reworked. BREAKING CHANGES included. See changes.txt for more}
-#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v4.2.1.2/VNMConfig.exe
+#message={Re-added 0xA3D6 as wheelbase device. See changes.txt for more}
+#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v4.2.1.3/VNMConfig.exe
 #method=0 (self-upgrade)
-#version=4.2.1.2
+#version=4.2.1.3
