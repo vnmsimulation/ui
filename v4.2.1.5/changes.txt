@@ -1,4 +1,0 @@
-05/09/2023 4.2.1.4
-
-+ Added: Buttonbox selection handler
-* Fixed: Buttonbox packet handler issues
