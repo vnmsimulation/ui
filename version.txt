@@ -1,3 +1,4 @@
+#message={Fixed buttonbox communication issues. See changes.txt for more} 
 #url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/4.2.1.4/VNMConfig.exe 
 #method=0 (self-upgrade) 
 #version=4.2.1.4 
