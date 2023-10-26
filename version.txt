@@ -2,3 +2,6 @@
 #url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v4.2.1.5/VNMConfig.exe
 #method=0 (self-upgrade)
 #version=4.2.1.5
+#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v4.2.1.5/VNMConfig.exe
+#method=0 (self-upgrade)
+#version=4.2.1.5
