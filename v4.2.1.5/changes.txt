@@ -1,25 +1,7 @@
-26/10/2023 4.2.1.5
-* Fixed: Run-time 204 error when closing the app
+15/11/2023 4.2.2.1
++ Added: Implemented DirectDrive heart beat handler
 
-21/10/2023 4.2.1.5
-* Fixed: Disabled actuator blinking animation when Motion page is inactive
-* Fixed: Replaced the Output component on Scripting page for better text rendering
-
-17/10/2023 4.2.1.5
-* Fixed: Attempted to fixed UI freezing issue when controls on Motion page are updated too fast
-
-15/10/2023 4.2.1.5
-* Fixed: Optimized tooltip display procedures
-
-14/10/2023 4.2.1.5
-* Fixed: An issue with the trackbar update procedure on Motion page causing Code 5 exception
-* Fixed: Incorrect tooltip direction on led panel
-
-30/09/2023 4.2.1.5
-* Fixed: Fixed an Exception caused by empty records in PyDict
-
-27/09/2023 4.2.1.5
-* Fixed: Plugins: Report['RAW'] is broken due to invalid array conversion
-
-10/09/2023 4.2.1.5
-* Fixed: Auto update not working when update url contains trailing spaces
+10/11/2023 4.2.2.1
++ Added: Implemented DirectDrive's max torque command
+* Fixed: DirecDrive - Max filter values reduced to 500
+* Fixed: AV raised when scripting command history file not found 

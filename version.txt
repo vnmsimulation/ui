@@ -1,4 +1,4 @@
-#message={Fixed crash and lag issues on Motion page. See changes.txt for more}
-#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v4.2.1.5/VNMConfig.exe
+#message={Fixed crash . See changes.txt for more}
+#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v4.2.2.1/VNMConfig.exe
 #method=0 (self-upgrade)
-#version=4.2.1.5
+#version=4.2.2.1
