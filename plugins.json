@@ -12,13 +12,13 @@
   },
   {
    "version": "1.0",
-   "path": "plugins/Race Room Experience.vnp",
-   "name": "Race Room Experience"
+   "path": "plugins/Race_Room_Experience.vnp",
+   "name": "Race_Room_Experience"
   },
   {
    "version": "1.0",
-   "path": "plugins/rFactor 2.vnp",
-   "name": "rFactor 2"
+   "path": "plugins/rFactor_2.vnp",
+   "name": "rFactor_2"
   }
   ]
 }
