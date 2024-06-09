@@ -1,0 +1,276 @@
+05/06/2024 4.4.2.1
+* Fixed: Disabled floating buttons
+
+02/06/2024 4.4.2.1
+* Fixed: Incorrect packet header when logging OUT packets
+
+01/06/2024 4.4.2.1
+* Fixed: Reduced number of log files
+
+30/05/2024 4.4.2.1
+* Fixed: Device>Reconnect menu not working
+
+27/05/2024 4.4.2.1
+* Fixed: High resolution timer will be disabled/resumed on when triggering windows hibernation mode
+
+26/05/2024 4.4.2.1
+* Fixed: Improved procedures related to debugging logs
+* Fixed: A critical issue in SetBuf procedure which causes data overflow, resultingin broken field values in Telemetry Engine
+
+25/05/2024 4.4.2.1
++ Added: DLL Plugin reload procedures
++ Added: High resolution timer to Telemetry Engine
+* Fixed: Failed to switch between Basic/Full mode in certain cases
+
+22/05/2024 4.4.1.3
+* Fixed: AV on TPLuginManager destroy
++ Added: An alpha version of DLL plugin system
+
+19/05/2024 4.4.1.3
++ Added: Multithreaded python engine support
+* Fixed: Updated DefaultPluginStore URL
++ Added: Motion and button box to Device Stats
++ Added: New script function to Scripting page
+* Fixed: Disabled Telemetry engine on Scripting page
+* Fixed: Disabled damper/friction/inertia filters in DirectDrive basic mode
+
+18/05/2024 4.4.1.3
++ Added: ThreadMode configuration option under Plugins section. Default: False
+* Fixed: Updated Telemetry engine worker
+
+16/05/2024 4.4.1.2
++ Added: ExecInterval configuration option under Plugins section. Default: 1ms
+* Fixed: Missing trailing backslash on plugins' LibraryPath
++ Added: PyYAML library to python distribution
+
+13/05/2024 4.4.1.2
++ Added: Backward compatibility to old handbrake firmwares (load/save deadzone will be disabled)
+
+12/05/2024 4.4.1.2
+* Fixed: AV issues with update firmware procedure
+* Added: Warning to unsupported handbrade firmwares
+
+11/05/2024 4.4.1.2
+* Fixed: Max angles not updated on configuration reload
+
+08/05/2024 4.4.1.2
+* Fixed: DirectDrive's max angles not properly set in Preferences
+* Fixed: Missing wheel animation image wheen Base/DirectDevice connects
+
+07/05/2024 4.4.1.2
++ Added: Duplicated requests check
+* Fixed: Base tab not active when a wheelbase connected
+* Fixed: AV in rare cases where a device panel is destroyed before sliding effect finishes
+* Fixed: Attempted to fix a race condition between device unplug event and reconnect event
+
+04/05/2024 4.4.1.1
+* FIxed: Removed multiple Free calls to avoid AV (Freeing already freed objects)
+* Fixed: A race condition in rare cases where queued packets are popped multiple times
++ Added: Device connection check before sending Enter Bootloader packet
++ Added: VNMFlash installation check when triggering firmware update procedure
++ Added: Update Firmware button to More menu
+
+02/05/2024 4.4.1.1
+* Fixed: J2Rec and Rec2J conversion procedures reworked
+
+01/05/2024 4.4.0.3
+* Fixed: AccelChar not shown on OK buttons
+* Fixed: Disabled bug reporting dialog on EOutOfResources exception
+
+30/04/2024 4.4.0.3
++ Added: Animation speed to wheel animation test form
+* Fixed: Changed all frames' ParentFont to True
+
+29/04/2024 4.4.0.3
+* Fixed: Adjusted telemetry settings panel
+* Fixed: Disabled Basic/Full button while switching procedure is being executed
+
+28/04/2024 4.4.0.3
++ Added: A More menu on top right corner
+* Fixed: Incorrect log's font color on Light theme
+* Fixed: Incorrect cursor on some dialogs/forms
+
+27/04/2024 4.4.0.3
+* Fixed: Shifter page display adjustments
+* Fixed: Shifter grid color not properly updated on theme changed
+* Fixed: Adjusted Direct Drive basic mode alignment
+* Fixed: Double PrepareCache patching issue
+* Fixed: Attempted to fix random AV on application exit
++ Added: Wheel image auto scaling (based on screen DPI)
+
+26/04/2024 4.4.0.3
+* Fixed: Improved wheel rotating precision to 0.01 degree
+* Fixed: Adjusted groupboxes with different caption skin
+
+25/04/2024 4.4.0.2
++ Added: Swapped TImage32 with new GDI+ animation class for better quality and transformation effect 
+* Fixed: Moved Basic/Full button to top-right corner
+* Fixed: Hid hardware tab when DirectDrive connected
+
+24/04/2024 4.4.0.2
++ Added: New tab icons
+* Fixed: Missing application icon
+
+23/04/2024 4.4.0.2
+* Fixed: New wheel test window
+* Fixed: Wheel animation related procedures/functions
+* Fixed: Light theme is now default
+* Fixed: Replaced light theme with new one
++ Added: Brand new wheel animation class with TImage32
+
+18/04/2024 4.4.0.2
+* Fixed: Scaling issues on ButtonBox and Wheel page (incorrect spacing calculations on different screen sizes)
+* Fixed: Ajusted statusbar size
+* Fixed: Suppressed exceptions when a HID device's attributes unreadable
+
+13/04/2024 4.4.0.2
++ Added: Basic/Full mode switching effect
+* Fixed: Improved packet monitoring
+* Fixed: Adjusted shifter page's font size 
+
+13/04/2024 4.4.0.1
+* Fixed: Adjusted wheel animation test window position
+* Fixed: Base/DirectDrive reconnection feature not properly working
+* Fixed: Rolled back the kernel resampler as smResize produces low quality transformation
+* Fixed: Disabled checkboxes on user effect settings
+
+08/04/2024 4.4.0.1
++ Added: DeviceTimeOut config to General section. Default: 6s
++ Added: Device Reconnect feature. Menu>Device>Reconnect
+
+07/04/2024 4.4.0.1
++ Added: Mutexes to prevent race condition in some rare situations
+* Fixed: An issue where critical events are not logged to file
+
+06/04/2024 4.4.0.1
++ Added: Basic/Full mode to DirectDrive tab
+
+04/04/2024 4.3.2.1
++ Added: Animated wheel autoscaling (based on screen DPI)
+
+01/04/2024 4.3.2.1
+* Fixed: Replaced kernel resampler with smResize
+* Fixed: Removed 0..100 mapping to avoid display gap issues
+
+31/03/2024 4.3.2.1
++ Added: Implemented Enter Bootloader procedure for Wheel/Motion/ButtonBox devices
+
+27/03/2024 4.3.2.1
+* Fixed: Multiple scaling issues on high DPI screens (2k-4k)
+
+24/03/2024 4.3.2.1
+* Fixed: Increased application window size by approx 10%
+
+22/03/2024 4.3.1.3
++ Added: Del and backspace button press will remove hotkey
+* Fixed: Ignored VK_LEFT, VK_RIGHT, VK_BACK and VK_DELETE when setting Centerize hotkey
+* Fixed: Centerize hotkey not properly unset
+
+17/03/2024 4.3.1.3
+* Fixed: Service start button not disabled when uisvc uninstalled
+
+07/03/2024 4.3.1.3
++ Added: Deadzone settings to handbrake page
+* Fixed: Minor adjustments & typos fixed
+
+19/02/2024 4.3.1.2
++ Added: Crash Effect Reduction option to DirectDrive
+* Fixed: Minor issue with tooltip display on Wheel page 
+
+18/02/2024 4.3.1.2
+* Fixed: An issue with wheel's config loading which may freeze the UI
+* Fixed: Improved tooltip initialization procedure
++ Added: Use SimHub option to wheel page
+
+20/01/2024 4.3.1.2
++ Added: Internal preparation for dynamic wheel interaction feature 
+
+18/01/2024 4.3.1.2
+* Fixed: An issue where the position on TTrackbar is not properly mapped 
+
+23/12/2023 4.3.1.1
++ Added: Packet monitoring feature to DirectDrive to detect missing packet issue
+
+22/12/2023 4.3.1.1
++ Added: Save profile button to Motion page
+* Fixed: Motion profile selector not reset when config is loaded from the device
+
+21/12/2023 4.3.1.1
++ Added: Implemented motion profile feature
+
+20/12/2023 4.3.1.1
+* Fixed: Improved the shared profile manager
++ Added: Park speed option to motion device
+
+09/12/2023 4.3.0.2
+* Fixed: An issue with KillTimers function causing random AV
+* Fixed: Re-implemented telemetry sending flow
+* Fixed: A bug where Telemetry Engine still starts while the feature is disabled
++ Added: Base's Telemetry FFB enable/disable option
+
+08/12/2023 4.3.0.2
+* Fixed: Wheel's forcebar sampling issue
+
+06/12/2023 4.3.0.2
+* Fixed: Upon receving device's config, selected actuator data not properly synchronized
+* Fixed: Selected Actuator's ParkAtPos value not updated
+
+05/12/2023 4.3.0.2
+* Fixed: Plugin's RAW packet sending issue
+
+04/12/2023 4.3.0.2
++ Added: ParkAtPos settings to Motion page
+
+03/12/2023 4.3.0.1
+* Fixed: Disabled Led panels when Enabled LED Effects unchecked
++ Added: A timer to the packet sampler. 
+		The sampler now resets based on whichever condition occurs first: either the elapsed time or when the queue is full.
+* Fixed: An issue where the sampler in Wheel packet handler not reset correctly
+* Fixed: Flickering issue on some progressbars (Wheel page)
+
+02/12/2023 4.3.0.1
+* Fixed: Incorrect value of Enable Max Torque mode when reloading config (Direct Drive)
+
+01/12/2023 4.3.0.1
+* Fixed: Updated help file
+
+25/11/2023 4.3.0.1
+* Fixed: Reduced sampling rate when updating bars on Wheel page
+
+15/11/2023 4.2.2.1
++ Added: Implemented DirectDrive heart beat handler
+
+10/11/2023 4.2.2.1
++ Added: Implemented DirectDrive's max torque command
+* Fixed: DirecDrive - Max filter values reduced to 500
+* Fixed: AV raised when scripting command history file not found 
+
+26/10/2023 4.2.1.5
+* Fixed: Run-time 204 error when closing the app
+
+21/10/2023 4.2.1.5
+* Fixed: Disabled actuator blinking animation when Motion page is inactive
+* Fixed: Replaced the Output component on Scripting page for better text rendering
+
+17/10/2023 4.2.1.5
+* Fixed: Attempted to fixed UI freezing issue when controls on Motion page are updated too fast
+
+15/10/2023 4.2.1.5
+* Fixed: Optimized tooltip display procedures
+
+14/10/2023 4.2.1.5
+* Fixed: An issue with the trackbar update procedure on Motion page causing Code 5 exception
+* Fixed: Incorrect tooltip direction on led panel
+
+30/09/2023 4.2.1.5
+* Fixed: Fixed an Exception caused by empty records in PyDict
+
+27/09/2023 4.2.1.5
+* Fixed: Plugins: Report['RAW'] is broken due to invalid array conversion
+
+10/09/2023 4.2.1.5
+* Fixed: Auto update not working when update url contains trailing spaces
+
+05/09/2023 4.2.1.4
++ Added: Buttonbox selection handler
+* Fixed: Buttonbox packet handler issues
