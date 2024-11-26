@@ -944,7 +944,7 @@ def generate_ffbReport():
             ffbReport.vnmSteeringAngle = round(ir['SteeringWheelAngle']/ir['SteeringWheelAngleMax']*10000)
         else:
             ffbReport.vnmSteeringAngle = 10000
-        ffbReport.vnmFinalFFB =  round(ir['SteeringWheelPctTorqueSign']*10000)
+        ffbReport.vnmFinalFFB =  round(ir['SteeringWheelPctTorqueSignStops']*10000)
         ffbReport.vnmThrottle =  round(ir['Throttle']*10000)
         ffbReport.vnmBrake =  round(ir['Brake']*10000)
         ffbReport.vnmClutch =  round(ir['Clutch']*10000)
