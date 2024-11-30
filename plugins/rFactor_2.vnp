@@ -879,7 +879,7 @@ info = SimInfo()
 
 def update_rFactorTelemetry():
     ffbReport.vnmSteeringAngle = round(info.Rf2Tele.mVehicles[0].mFilteredSteering*10000)
-    ffbReport.vnmFinalFFB =  round(info.Rf2Ffb.mForceValue*10000)
+    ffbReport.vnmFinalFFB =  -round(info.Rf2Ffb.mForceValue*10000)
     ffbReport.vnmThrottle =  round(info.Rf2Tele.mVehicles[0].mFilteredThrottle*10000)
     ffbReport.vnmBrake =  round(info.Rf2Tele.mVehicles[0].mFilteredBrake*10000)
     ffbReport.vnmClutch = round(info.Rf2Tele.mVehicles[0].mFilteredClutch*10000)
