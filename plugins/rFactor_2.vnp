@@ -914,7 +914,7 @@ def send_data():
 
 
 class PluginInfo:
-   Name='rFactor 2'
+   Name='rFactor2/LMU'
    PluginType='telemetry'
    Author='hoantv'
    Description='Plugin for rFactor 2'
