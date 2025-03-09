@@ -212,7 +212,13 @@ def map_value(value, from_min, from_max, to_min, to_max):
     mapped_value = to_min + (proportion * (to_max - to_min))
     return mapped_value
 
-pluginConfig = json.loads(Datas.Value["ActiveProfile"])
+if Datas.Value["ProfileChanged"] == "1":
+    pluginConfig = json.loads(Datas.Value["ActiveProfile"])
+else:
+    pluginConfig = {}
+    pluginConfig["ForceReductionThresholdDeg"] = 0
+    pluginConfig["ForceReductionFactor"] = 0
+    pluginConfig["RoadTextureGain"] = 0
 
 
 def check_plugin_config_change():
