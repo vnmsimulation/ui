@@ -1,7 +1,0 @@
-15/11/2023 4.2.2.1
-+ Added: Implemented DirectDrive heart beat handler
-
-10/11/2023 4.2.2.1
-+ Added: Implemented DirectDrive's max torque command
-* Fixed: DirecDrive - Max filter values reduced to 500
-* Fixed: AV raised when scripting command history file not found 
