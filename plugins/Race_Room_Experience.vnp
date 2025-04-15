@@ -475,9 +475,8 @@ class RaceRoomData(object):
     def start(self):
         if not self.buff:
             R3E_SHARED_MEMORY_NAME = "$R3E"
-            print (sizeof(r3e_shared))
-            print ('RaceRoomData::start() reading shared memory:', R3E_SHARED_MEMORY_NAME)
-            self.buff = mmap.mmap(-1, sizeof(r3e_shared), R3E_SHARED_MEMORY_NAME, access=mmap.ACCESS_READ)
+            SHARED_MEMORY_SIZE = 1024 * 1024
+            self.buff = mmap.mmap(-1, SHARED_MEMORY_SIZE, R3E_SHARED_MEMORY_NAME)
 
     def stop(self):
         if self.buff:
