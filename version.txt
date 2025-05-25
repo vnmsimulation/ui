@@ -1,4 +1,4 @@
-#message={}
+#message={New ffbMode feature and multiple quality of life changes. See changes.txt for more}
 #url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v5.1.1.2/VNMConfig.exe
 #method=0 (self-upgrade)
 #version=5.1.1.2
