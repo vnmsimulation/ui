@@ -1,0 +1,88 @@
+25/05/2025 5.1.1.2
+* Fixed: Selected tab icon not properly applied due to cache issue
+* Fixed: Updated tab icons with the same size
+
+18/05/2025 5.1.1.2
+* Fixed: Updated DLL plugin system
+
+17/05/2025 5.1.1.2
++ Added: Dependencies support to plugin system
+
+07/05/2025 5.1.1.2
+* Fixed: Moved system menu to the title bar
+
+06/05/2025 5.1.1.2
+* Fixed: Removed debug tab (debug window is not attached to the active tab)
+
+04/05/2025 5.1.1.2
+* Fixed: Disabled DI Ratio when ffb mode is not TIC
++ Added: Value representation to trackbars
+
+03/05/2025 5.1.0.1
+* Fixed: First profile on non-wheelbase devices cannot be saved
++ Added: vnm.api - Automatically re-initialize the device when a valid handle is present
+
+25/04/2025 5.1.0.1
+* Fixed: vnm.api - An issue with dynamic float array as input
+
+24/04/2025 5.1.0.1
+* Fixed: vnm.api - An issue with invalid haptic/multi-sample data
++ Added: iRacing FFB mode (360Hz)
+
+22/04/2025 5.1.0.1
+* Fixed: Access violation when loading profile names
+
+21/04/2025 5.1.0.1
++ Added: Linear/Rotation (CanOpen) support to Actuator types
+
+13/04/2025 5.1.0.1
+* Fixed: Removed Graph animation option from Preferences page
++ Added: ExitOnShutdown option to Preferences/General as a remedy to 'Application is preventing shutdown' issue
+
+11/04/2025 5.1.0.1
++ Added: Implemented DirectDrive's custom image feature
+
+30/03/2025 5.1.0.1
+* Fixed: Visual error on Hardware page
+
+29/03/2025 5.1.0.1
+* Fixed: Packets being dropped on Device's Save procedure
+
+26/03/2025 5.1.0.1
+* Fixed: Enabled new Profile Manager on DirectDrive by default
+
+25/03/2025 5.1.0.1
+* Fixed: Migrated wheelbase profile to the new profile format
+
+24/03/2025 5.0.2.1
+* Fixed: An issue where packets are not handled correctly on wheelbase firmwares
+
+22/03/2025 5.0.2.1
++ Added: CommitID to application title on alpha/beta builds
+
+20/03/2025 5.0.2.1
+* Added: Motor type config to Pedal page
+
+18/03/2025 5.0.2.1
+* Fixed: CmdQueue not fully cleared when device is unplugged
+
+16/03/2025 5.0.2.1
+* Fixed: Increased DirectDrive temperature gauge sizes
+
+15/03/2025 5.0.2.1
++ Added: Created an internal channel for testing/nightly builds
+* Fixed: UPdated DirectDrive ON/OFF logo
++ Added: A 10-second timer added to prevent repetitive configuration reload
+
+13/03/2025 5.0.2.1
+* Fixed: Disabled DirectDrive configuration reload check when loading profile
++ Added: DI Ratio config to DirectDrive page
++ Added: vnm.api.dll - IsDeviceReady function
++ Added: vnm.api.dll - DeviceUnplug handler
+* Fixed: vnm.api.dll - Invalid data size in shutdownDevice
+
+12/03/2025 5.0.2.1
++ Added: ffbTIC mode to DirectDrive
+
+10/03/2025 5.0.2.1
+* Fixed: Unable to check for new firmware version when there are multiple versions for a specific PID
