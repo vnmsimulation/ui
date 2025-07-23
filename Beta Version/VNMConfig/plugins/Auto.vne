@@ -1,4 +1,0 @@
-main()
-send_data()
-#this line is important. Used to update host values
-Report.Value=Report.Value
