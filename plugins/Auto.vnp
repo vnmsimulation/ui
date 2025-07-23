@@ -2149,6 +2149,11 @@ def check_rf2_lmu():
         if info.Rf2Ext.mInRealtimeFC is True:
             vnmDataReport = converByteArrayToVnmDataReport(struct.unpack(vnm_data_format_string, Datas.Value["VNM_DATA_REPORT"]))
             connectedGame = RunningGame.RF2_LMU
+            index = 0
+            for vehicle in info.Rf2Scor.mVehicles:
+                if vehicle.mIsPlayer:  # This marks the player's car
+                    break
+                index += 1
             ffbReport.vnmSteeringAngle = round(info.Rf2Tele.mVehicles[0].mFilteredSteering*10000)
             ffbReport.vnmFinalFFB =  -round(info.Rf2Ffb.mForceValue*10000)
             ffbReport.vnmThrottle =  round(info.Rf2Tele.mVehicles[0].mFilteredThrottle*10000)
@@ -2158,12 +2163,12 @@ def check_rf2_lmu():
             ffbReport.vnmRpm = round(info.Rf2Tele.mVehicles[0].mEngineRPM)
             ffbReport.vnmSpeedKmh = round(math.hypot(info.Rf2Tele.mVehicles[0].mLocalVel.x, info.Rf2Tele.mVehicles[0].mLocalVel.y, info.Rf2Tele.mVehicles[0].mLocalVel.z)*3.6)
             ffbReport.vnmFuel = round(info.Rf2Tele.mVehicles[0].mFuel)
-            road_texture = (info.Rf2Tele.mVehicles[0].mWheels[1].mSuspensionDeflection*500000 - vnmDataReport.suspensionRight - info.Rf2Tele.mVehicles[0].mWheels[0].mSuspensionDeflection*500000 + vnmDataReport.suspensionLeft) * pluginConfig["RoadTextureGain"]/100
+            road_texture = (info.Rf2Tele.mVehicles[index].mWheels[1].mSuspensionDeflection*500000 - vnmDataReport.suspensionRight - info.Rf2Tele.mVehicles[index].mWheels[0].mSuspensionDeflection*500000 + vnmDataReport.suspensionLeft) * pluginConfig["RoadTextureGain"]/100
             if road_texture == 0:
                 road_texture = vnmDataReport.rf2LmuOldroadTexture
             vnmDataReport.rf2LmuOldroadTexture = road_texture
-            vnmDataReport.suspensionLeft = info.Rf2Tele.mVehicles[0].mWheels[0].mSuspensionDeflection*500000
-            vnmDataReport.suspensionRight = info.Rf2Tele.mVehicles[0].mWheels[1].mSuspensionDeflection*500000
+            vnmDataReport.suspensionLeft = info.Rf2Tele.mVehicles[index].mWheels[0].mSuspensionDeflection*500000
+            vnmDataReport.suspensionRight = info.Rf2Tele.mVehicles[index].mWheels[1].mSuspensionDeflection*500000
             ffbReport.vnmFinalFFB += clamp(round(road_texture), -3000, 3000)
             Datas.Value["VNM_DATA_REPORT"] = vnmDataReport.to_bytes()
         else:

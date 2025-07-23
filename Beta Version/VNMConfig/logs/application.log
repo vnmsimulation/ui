@@ -1,0 +1,167 @@
+----------------------------------------------------------------------
+Application : VNMConfig 5.0.2.1
+Path        : E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\
+CPU cores   : 20
+OS version  : Windows 10 (Version 22H2, OS Build 19045.5737, 64-bit Edition)
+Host        : I9-11900KF
+Username    : HoanTV
+Started     : 17-05-2025 13:16:33.958 
+Debug mode  : On
+----------------------------------------------------------------------
+17-05-2025 13:16:35.062  [INFO] [main]Starting up VNM UI
+Version: 5.0.2.1@75b77906
+Build date: 03/20/2025 20:55:21.81 [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:35.062  [INFO] [main]Screen PPI: 96 [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:35.099  [INFO] [main]Plugin Select Plugin loaded. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:35.099  [INFO] [main]Telemetry engine started. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:35.206  [INFO] [main]Checking for updates [ThreadId: 12684] [PID: 1672]
+17-05-2025 13:16:35.206  [DEBUG] https://raw.githubusercontent.com/vnmsimulation/ui/main/version.txt [ThreadId: 12684] [PID: 1672]
+17-05-2025 13:16:35.803  [INFO] [main][A4A8]VNM Pedal V2 arrived. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:35.808  [INFO] [main][A4A8]Pedal connected. [ThreadId: 16848] [PID: 1672]
+17-05-2025 13:16:35.808  [INFO] [main]Main thread Id: 17680. HIDData thread Id: 17044 [ThreadId: 17044] [PID: 1672]
+17-05-2025 13:16:35.810  [INFO] [main][A3D9]VNM GT Steering Wheel V1 arrived. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:36.511  [DEBUG] #message={. See changes.txt for more}
+#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v5.0.1.4/VNMConfig.exe
+#method=0 (self-upgrade)
+#version=5.0.1.4
+ [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:36.511  [INFO] [main]No updates found. [ThreadId: 12684] [PID: 1672]
+17-05-2025 13:16:38.885  [INFO] [main][A3D9]Wheel connected. [ThreadId: 14456] [PID: 1672]
+17-05-2025 13:16:38.885  [INFO] [main]Main thread Id: 17680. HIDData thread Id: 7924 [ThreadId: 7924] [PID: 1672]
+17-05-2025 13:16:38.924  [INFO] [main][A3D5]VNM Direct Drive arrived. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:38.924  [INFO] [main]Wheelbase connected. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:38.924  [INFO] [main]Main thread Id: 17680. HIDData thread Id: 8668 [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.618  [INFO] [main][0xA3D5][0xE0][RFWVer] [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:46.724  [INFO] [main][0xA3D5][0xE0][Ack] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.724  [INFO] [main]FW Version: 1.0.0.109 [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.725  [INFO] [main][0xA3D5][Load-6] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.726  [INFO] [main][0xA3D5][0xE3][RBaseConf] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.727  [INFO] [main][0xA3D5][0xE1][RJoystick] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.728  [INFO] [main][0xA3D5][0xE2][RMotorConf] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.748  [INFO] [main][0xA3D5][0xE3][Ack] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.749  [INFO] [main][0xA3D5][0xE4][RUserEffects] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.760  [INFO] [main][0xA3D5][0xE1][Ack] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.782  [INFO] [main][0xA3D5][0xE2][Ack] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.796  [INFO] [main][0xA3D5][0xE4][Ack] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.797  [INFO] [main][0xA3D5][0xE5][RTelemetry] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.802  [INFO] [main][0xA3D5][0xE5][Ack] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.802  [INFO] [main]Writing profile data [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.803  [INFO] [main][0xA3D5][DDriveConf] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:46.804  [INFO] [main][0xA3D5][WUserEffect] [ThreadId: 8668] [PID: 1672]
+17-05-2025 13:16:49.617  [WARN] [main]Failed to receive packets from wheelbase for over 3 seconds [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:54.323  [DEBUG] [MainForm][cGameSelector][] Clicked [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:56.803  [INFO] [main]Telemetry engine stopped. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:56.803  [INFO] [main]Loading plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\Auto.vnp [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:56.928  [INFO] [main]Plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\Auto.vnp loaded [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:16:56.928  [INFO] [main]Telemetry engine started. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:00.386  [DEBUG] [MainForm][cGameSelector][] Clicked [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:01.065  [DEBUG] [Form][][] Clicked [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:01.341  [INFO] [main]Telemetry engine stopped. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:01.379  [INFO] [main]Plugin Auto loaded. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:01.379  [INFO] [main]Telemetry engine started. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:01.379  [INFO] [plugin]RunningGame.AC_ACC [ThreadId: 3952] [PID: 1672]
+17-05-2025 13:17:04.311  [DEBUG] [FrameDirectDrive][btnApply][] Clicked [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:04.312  [INFO] [main][0xA3D5][DDriveConf] [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:04.313  [INFO] [main][0xA3D5][WUserEffect] [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:17:13.659  [INFO] [plugin]RunningGame.NONE [ThreadId: 3952] [PID: 1672]
+17-05-2025 13:19:00.885  [INFO] [plugin]RunningGame.RF2_LMU [ThreadId: 3952] [PID: 1672]
+17-05-2025 13:19:26.207  [INFO] [main][0xA3D5][AEnterBldr] [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:19:26.516  [INFO] [main]VNM Direct Drive removed [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:19:32.042  [INFO] [main]Detected device(s) in DFU mode. [ThreadId: 17680] [PID: 1672]
+17-05-2025 13:19:46.609  [DEBUG] [MainForm][bCloseTmPanel][] Clicked [ThreadId: 17680] [PID: 1672]
+----------------------------------------------------------------------
+Application : VNMConfig 5.0.2.1
+Path        : E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\
+CPU cores   : 20
+OS version  : Windows 10 (Version 22H2, OS Build 19045.5854, 64-bit Edition)
+Host        : I9-11900KF
+Username    : HoanTV
+Started     : 17-05-2025 13:22:17.285 
+Debug mode  : On
+----------------------------------------------------------------------
+17-05-2025 13:22:18.411  [INFO] [main]Starting up VNM UI
+Version: 5.0.2.1@75b77906
+Build date: 03/20/2025 20:55:21.81 [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:18.411  [INFO] [main]Screen PPI: 96 [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:18.615  [INFO] [main]Loading plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\Auto.vnp [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:19.273  [INFO] [main]Plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\Auto.vnp loaded [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:19.307  [INFO] [main]Plugin Auto loaded. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:19.307  [INFO] [main]Telemetry engine started. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:19.572  [INFO] [main]Detected device(s) in DFU mode. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:19.683  [INFO] [main]Checking for updates [ThreadId: 13800] [PID: 14524]
+17-05-2025 13:22:19.683  [DEBUG] https://raw.githubusercontent.com/vnmsimulation/ui/main/version.txt [ThreadId: 13800] [PID: 14524]
+17-05-2025 13:22:20.435  [INFO] [main][A4A8]VNM Pedal V2 arrived. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:20.445  [INFO] [main][A4A8]Pedal connected. [ThreadId: 2472] [PID: 14524]
+17-05-2025 13:22:20.445  [INFO] [main]Main thread Id: 14224. HIDData thread Id: 2612 [ThreadId: 2612] [PID: 14524]
+17-05-2025 13:22:20.448  [INFO] [main][A3D9]VNM GT Steering Wheel V1 arrived. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:21.950  [DEBUG] #message={. See changes.txt for more}
+#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v5.0.1.4/VNMConfig.exe
+#method=0 (self-upgrade)
+#version=5.0.1.4
+ [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:21.951  [INFO] [main]No updates found. [ThreadId: 13800] [PID: 14524]
+17-05-2025 13:22:23.556  [INFO] [main][A3D9]Wheel connected. [ThreadId: 2380] [PID: 14524]
+17-05-2025 13:22:23.556  [INFO] [main]Main thread Id: 14224. HIDData thread Id: 17196 [ThreadId: 17196] [PID: 14524]
+17-05-2025 13:22:29.616  [INFO] [main][A3D5]VNM Direct Drive arrived. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:29.616  [INFO] [main]Wheelbase connected. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:29.616  [INFO] [main]Main thread Id: 14224. HIDData thread Id: 4556 [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.779  [INFO] [main][0xA3D5][0xE0][RFWVer] [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:32.782  [INFO] [main][0xA3D5][0xE0][Ack] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.782  [INFO] [main]FW Version: 1.0.0.109 [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.783  [INFO] [main][0xA3D5][Load-6] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.784  [INFO] [main][0xA3D5][0xE3][RBaseConf] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.785  [INFO] [main][0xA3D5][0xE1][RJoystick] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.786  [INFO] [main][0xA3D5][0xE2][RMotorConf] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.805  [INFO] [main][0xA3D5][0xE3][Ack] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.806  [INFO] [main][0xA3D5][0xE4][RUserEffects] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.815  [INFO] [main][0xA3D5][0xE1][Ack] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.833  [INFO] [main][0xA3D5][0xE2][Ack] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.844  [INFO] [main][0xA3D5][0xE4][Ack] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.845  [INFO] [main][0xA3D5][0xE5][RTelemetry] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.847  [INFO] [main][0xA3D5][0xE5][Ack] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.847  [INFO] [main]Writing profile data [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.848  [INFO] [main][0xA3D5][DDriveConf] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:32.849  [INFO] [main][0xA3D5][WUserEffect] [ThreadId: 4556] [PID: 14524]
+17-05-2025 13:22:35.780  [WARN] [main]Failed to receive packets from wheelbase for over 3 seconds [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:50.244  [DEBUG] [MainForm][chkEnableTelemetry][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:50.244  [DEBUG] [MainForm][chkEnableTelemetry][] Checked: False [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:50.244  [INFO] [main]Telemetry engine stopped. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:50.755  [DEBUG] [MainForm][chkEnableTelemetry][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:50.755  [DEBUG] [MainForm][chkEnableTelemetry][] Checked: True [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:22:50.755  [INFO] [main]Telemetry engine started. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:23:39.030  [INFO] [plugin]RunningGame.IRACING [ThreadId: 11888] [PID: 14524]
+17-05-2025 13:23:47.393  [DEBUG] [FrameDirectDrive][DDPaintBox][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:13.418  [DEBUG] [FrameDirectDrive][cFFBMode][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:16.857  [DEBUG] [Form][][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:17.906  [DEBUG] [FrameDirectDrive][btnApply][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:17.907  [INFO] [main][0xA3D5][DDriveConf] [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:17.908  [INFO] [main][0xA3D5][WUserEffect] [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:20.260  [DEBUG] [FrameDirectDrive][cFFBMode][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:20.869  [DEBUG] [Form][][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:21.738  [DEBUG] [FrameDirectDrive][btnApply][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:21.739  [INFO] [main][0xA3D5][DDriveConf] [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:21.740  [INFO] [main][0xA3D5][WUserEffect] [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:34.898  [DEBUG] [FrameDirectDrive][pnlMaxAngle][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:37.791  [DEBUG] [MainForm][cGameSelector][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:38.607  [DEBUG] [MainForm][cGameSelector][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:46.719  [ERROR] [upgrader] Download error with: Access violation at address 02AF3500 in module 'VNMConfig.exe' (offset 26F3500). Execution of address 02AF3500 [ThreadId: 11128] [PID: 14524]
+17-05-2025 13:24:48.835  [DEBUG] [FormPlugins][btnRefresh][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:49.963  [DEBUG] [FormPlugins][btnClose][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:52.698  [INFO] [main]Telemetry engine stopped. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:52.698  [INFO] [main]Loading plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\Auto.vnp [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:52.717  [INFO] [main]Plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\Auto.vnp loaded [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:52.717  [INFO] [main]Loading plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\iRacing.vnp [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:52.723  [INFO] [main]Plugin: E:\VNM Release\VNM Simulation\ui\Beta Version\VNMConfig\plugins\iRacing.vnp loaded [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:52.724  [INFO] [main]Telemetry engine started. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:53.619  [DEBUG] [MainForm][cGameSelector][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:54.472  [DEBUG] [Form][][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:54.745  [INFO] [main]Telemetry engine stopped. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:54.752  [INFO] [main]Plugin iRacing loaded. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:54.752  [INFO] [main]Telemetry engine started. [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:55.984  [DEBUG] [FrameDirectDrive][btnApply][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:55.984  [INFO] [main][0xA3D5][DDriveConf] [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:55.985  [INFO] [main][0xA3D5][WUserEffect] [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:24:59.603  [DEBUG] [MainForm][cPluginProfiles][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:25:00.560  [DEBUG] [MainForm][cPluginProfiles][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:25:23.055  [DEBUG] [MainForm][chkSendTmToBase][] Clicked [ThreadId: 14224] [PID: 14524]
+17-05-2025 13:25:23.055  [DEBUG] [MainForm][chkSendTmToBase][] Checked: True [ThreadId: 14224] [PID: 14524]
