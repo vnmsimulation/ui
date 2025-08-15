@@ -1,6 +1,0 @@
-read_physics()
-read_static()
-read_graphics()
-send_data()
-#this line is important. Used to update host values
-Report.Value=Report.Value
