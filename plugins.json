@@ -1,26 +1,6 @@
 {
  "plugins": [
   {
-   "version": "1.0",
-   "path": "plugins/AC_ACC.vnp",
-   "name": "AC_ACC"
-  },
-  {
-   "version": "1.0",
-   "path": "plugins/iRacing.vnp",
-   "name": "iRacing"
-  },
-  {
-   "version": "1.0",
-   "path": "plugins/Race_Room_Experience.vnp",
-   "name": "Race_Room_Experience"
-  },
-  {
-   "version": "1.0",
-   "path": "plugins/rFactor_2.vnp",
-   "name": "rFactor_2"
-  },
-  {
    "version": "1.1",
    "path": "plugins/Auto.vnp",
    "name": "Auto"
