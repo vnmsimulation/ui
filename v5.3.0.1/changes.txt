@@ -1,4 +1,4 @@
-**Update highlights for the new beta (available on vnmsimulation.com):**
+**Update highlights:**
 * DirectDrive:
       - Auto configuration apply (3s)
       - Added description icons across DirectDrive page
