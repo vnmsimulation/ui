@@ -1,0 +1,26 @@
+**Update highlights for the new beta (available on vnmsimulation.com):**
+* DirectDrive:
+      - Auto configuration apply (3s)
+      - Added description icons across DirectDrive page
+      - Added wheel angle meter under the wheel image
+      - Added quick angle popup menu to Steering Range
+      - Added glow effect to Apply/Save buttons when there are configuration changes
+      - Fixed a false positive request timed out message
+      - Reversed the Overall Filter slider (now higher values create smoother effect, 0 means disabled)
+      - Implemented HotkeyManager to support keyboards/gamepads/joysticks and other devices that have buttons as requested in #"UI button mapping" 
+      *Added hotkey settings:* 
+        HotKey step: to control how much the value change each time a hotkey pressed 
+        HotKey sensitivity: to control how fast you can press a hotkey (available in latter builds)
+        Notification position: adjusts the HotKey notification position (default: bottom-center)    
+      - Other minor bug fixes
+* Profile Manager: 
+      - Natural sort applied
+      - Multiple bugs fixed
+* Plugin System rework: 
+      - New plugin type supported (dll) - Note that old plugins (*.vnp/vne) still work
+      - Updated Plugin Store interface with new version check
+      - Added dynamic plugin configuration UI generator (plugin config interface can be created dynamically by plugin developers)
+      - Added separated Profile manager for each plugin (dll)
+      - Added page status icon (enabled/disabled) for multi-page plugin configuration
+* Added Help and Minimize to tray button on the top right corner
+* Added Start with Windows option (Preferences>General)
