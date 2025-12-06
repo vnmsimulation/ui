@@ -1,0 +1,26 @@
+Update highlights
+
+* User interface: 
+  - New UI layout
+  - Disabled other themes
+  - Moved Preferences window to Setting tab
+  - Moved Telemetry panel to a separated DirectDrive settings section
+* New features:
+  - Custom configurable UI font (Settings > General)
+  - DirectDrive: Configuration Revert: Replaced the Load button with Revert button. As long as you don't click Save, you can revert applied changes.
+  - DirectDrive: DLL Plugin profile sharing (share/import)
+  - Start minimized option
+  - ACR support
+* Adjustments and fixes:
+  - Profile Manager: Fixed incorrect profile switching when adding/renaming a profile
+  - DirectDrive: Reduced auto-config-apply timer from 3s to 2s
+  - DirectDrive: Added current profile name to profile switching notification overlay
+  - DirectDrive: Added calculated torque value the notification overlay when adjusting Overall Gain using hotkey
+  - DirectDrive: Disable hotkey record button when no device selected
+  - DirectDrive: Fixed unnecessary "Joystick capturing stopped" log appearing when a device is disconnected
+  - DirectDrive: Fixed an issue with packet handler that can freeze the UI
+  - Fixed a DPI-aware issue with Plugin config UI on specific resolution
+  - Fixed an access violation when calling Plugin Reload while telemetry engine is running
+  - Added checks to avoid Plugin config UI re-generating
+  - Improved control locking logic
+  - Improved single instance check
