@@ -1,4 +1,4 @@
 #message={. See changes.txt for more}
-#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v6.0.2.1/VNMConfig.exe
+#url1=https://raw.githubusercontent.com/vnmsimulation/ui/main/v6.0.2.2/VNMConfig.exe
 #method=0 (self-upgrade)
-#version=6.0.2.1
+#version=6.0.2.2
