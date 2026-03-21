@@ -1,2 +1,0 @@
-11/06/2024 4.4.2.2
-* Fixed: Incorrect version info
