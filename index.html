@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNM Simulation Repo Index</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #24292f; max-width: 900px; margin: 40px auto; padding: 0 20px; background: #f6f8fa; }
+        .container { background: white; border: 1px solid #d0d7de; border-radius: 6px; overflow: hidden; }
+        .header { padding: 16px; border-bottom: 1px solid #d0d7de; background: #ffffff; }
+        h1 { margin: 0; font-size: 18px; }
+        .breadcrumb { font-size: 14px; color: #57606a; margin-top: 5px; }
+        .breadcrumb a { color: #0969da; text-decoration: none; }
+        .file-list { list-style: none; padding: 0; margin: 0; }
+        .file-item { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; padding: 8px 16px; border-bottom: 1px solid #d0d7de; text-decoration: none; color: #24292f; font-size: 14px; }
+        .file-item:last-child { border-bottom: none; }
+        .file-item:hover { background-color: #f6f8fa; color: #0969da; }
+        .icon { font-size: 16px; }
+        .loading { padding: 20px; text-align: center; color: #57606a; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>VNM Simulation Repository</h1>
+        <div id="breadcrumb" class="breadcrumb"></div>
+    </div>
+    <div id="listing" class="file-list">
+        <div class="loading">Fetching data from GitHub...</div>
+    </div>
+</div>
+
+<script>
+    const REPO_OWNER = 'vnmsimulation';
+    const REPO_NAME = 'ui';
+    
+    // Get current path from URL (e.g., ?path=v6.0.2.2)
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPath = urlParams.get('path') || '';
+
+    function updateBreadcrumb() {
+        const bc = document.getElementById('breadcrumb');
+        let html = `<a href="?">root</a>`;
+        let fullPath = '';
+        
+        if (currentPath) {
+            const parts = currentPath.split('/');
+            parts.forEach((part, i) => {
+                fullPath += (i === 0 ? '' : '/') + part;
+                html += ` / <a href="?path=${encodeURIComponent(fullPath)}">${part}</a>`;
+            });
+        }
+        bc.innerHTML = html;
+    }
+
+    async function loadContents() {
+        const listing = document.getElementById('listing');
+        const apiUri = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${currentPath}`;
+
+        try {
+            const res = await fetch(apiUri);
+            const items = await res.json();
+
+            if (!Array.isArray(items)) throw new Error("Folder not found");
+
+            // Sort: Folders first, then files
+            items.sort((a, b) => (b.type === 'dir') - (a.type === 'dir') || a.name.localeCompare(b.name));
+
+            let html = '';
+            
+            // Add "Back" link if not in root
+            if (currentPath) {
+                const parentPath = currentPath.split('/').slice(0, -1).join('/');
+                html += `<a href="?path=${encodeURIComponent(parentPath)}" class="file-item">
+                            <span class="icon">📁</span>
+                            <span>..</span>
+                         </a>`;
+            }
+
+            items.forEach(item => {
+                if (item.name === 'index.html' || item.name === 'CNAME') return;
+
+                const isDir = item.type === 'dir';
+                const link = isDir ? `?path=${encodeURIComponent(item.path)}` : item.download_url;
+                const icon = isDir ? '📁' : '📄';
+
+                html += `
+                    <a href="${link}" class="file-item">
+                        <span class="icon">${icon}</span>
+                        <span>${item.name}</span>
+                        <span style="color:#57606a; font-size:12px;">${isDir ? 'Folder' : (item.size / 1024).toFixed(1) + ' KB'}</span>
+                    </a>`;
+            });
+
+            listing.innerHTML = html || '<div class="loading">This directory is empty.</div>';
+            updateBreadcrumb();
+
+        } catch (err) {
+            listing.innerHTML = `<div class="loading" style="color:red;">Error: ${err.message}</div>`;
+        }
+    }
+
+    loadContents();
+</script>
+
+</body>
+</html>
