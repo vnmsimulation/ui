@@ -11,13 +11,12 @@
         h1 { margin: 0; font-size: 18px; display: flex; align-items: center; gap: 8px; }
         .breadcrumb { font-size: 14px; color: #57606a; margin-top: 5px; }
         .breadcrumb a { color: #0969da; text-decoration: none; font-weight: 500; }
-        .breadcrumb a:hover { text-decoration: underline; }
         .file-list { list-style: none; padding: 0; margin: 0; }
-        .file-item { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; padding: 10px 16px; border-bottom: 1px solid #d0d7de; text-decoration: none; color: #24292f; font-size: 14px; transition: background 0.1s; }
+        .file-item { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; padding: 10px 16px; border-bottom: 1px solid #d0d7de; text-decoration: none; color: #24292f; font-size: 14px; cursor: pointer; }
         .file-item:last-child { border-bottom: none; }
         .file-item:hover { background-color: #f6f8fa; color: #0969da; }
         .icon { font-size: 16px; display: flex; justify-content: center; }
-        .loading { padding: 40px; text-align: center; color: #57606a; font-style: italic; }
+        .loading { padding: 40px; text-align: center; color: #57606a; }
         .file-info { color: #57606a; font-size: 12px; }
     </style>
 </head>
@@ -34,21 +33,36 @@
 </div>
 
 <script>
-    // --- CONFIGURATION ---
     const REPO_OWNER = 'vnmsimulation';
     const REPO_NAME = 'ui';
     
     const urlParams = new URLSearchParams(window.location.search);
     const currentPath = urlParams.get('path') || '';
 
+    // Function to force download
+    async function downloadFile(url, filename) {
+        try {
+            const response = await fetch(url);
+            const blob = await response.blob();
+            const blobUrl = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(blobUrl);
+            document.body.removeChild(a);
+        } catch (e) {
+            window.location.href = url; // Fallback if fetch fails
+        }
+    }
+
     function updateBreadcrumb() {
         const bc = document.getElementById('breadcrumb');
         let html = `<a href="?">root</a>`;
         let accumulatedPath = '';
-        
         if (currentPath) {
-            const parts = currentPath.split('/');
-            parts.forEach((part, i) => {
+            currentPath.split('/').forEach((part, i) => {
                 accumulatedPath += (i === 0 ? '' : '/') + part;
                 html += ` / <a href="?path=${encodeURIComponent(accumulatedPath)}">${part}</a>`;
             });
@@ -62,46 +76,47 @@
 
         try {
             const res = await fetch(apiUri);
-            if (!res.ok) throw new Error(`GitHub API returned ${res.status}`);
             const items = await res.json();
-
-            // Sort: Folders first, then files alphabetically
             items.sort((a, b) => (b.type === 'dir') - (a.type === 'dir') || a.name.localeCompare(b.name));
 
             let html = '';
             
-            // "Up one level" navigation
             if (currentPath) {
                 const parentPath = currentPath.split('/').slice(0, -1).join('/');
                 const upLink = parentPath ? `?path=${encodeURIComponent(parentPath)}` : '?';
-                html += `<a href="${upLink}" class="file-item">
-                            <span class="icon">⤴️</span>
-                            <span>..</span>
-                            <span></span>
-                         </a>`;
+                html += `<a href="${upLink}" class="file-item"><span class="icon">⤴️</span><span>..</span><span></span></a>`;
             }
 
             items.forEach(item => {
-                // Ignore index.html, CNAME, and ALL .md files
-                if (item.name === 'index.html' || 
-                    item.name === 'CNAME' || 
-                    item.name.toLowerCase().endsWith('.md')) {
-                    return;
-                }
+                if (item.name === 'index.html' || item.name === 'CNAME' || item.name.toLowerCase().endsWith('.md')) return;
 
                 const isDir = item.type === 'dir';
-                const link = isDir ? `?path=${encodeURIComponent(item.path)}` : item.download_url;
                 const icon = isDir ? '📁' : '📄';
+                const size = isDir ? 'Folder' : (item.size / 1024).toFixed(1) + ' KB';
 
-                html += `
-                    <a href="${link}" class="file-item">
-                        <span class="icon">${icon}</span>
-                        <span>${item.name}</span>
-                        <span class="file-info">${isDir ? 'Folder' : (item.size / 1024).toFixed(1) + ' KB'}</span>
-                    </a>`;
+                const itemRow = document.createElement('div');
+                itemRow.className = 'file-item';
+                itemRow.innerHTML = `<span class="icon">${icon}</span><span>${item.name}</span><span class="file-info">${size}</span>`;
+                
+                itemRow.onclick = (e) => {
+                    e.preventDefault();
+                    if (isDir) {
+                        window.location.search = `?path=${encodeURIComponent(item.path)}`;
+                    } else {
+                        downloadFile(item.download_url, item.name);
+                    }
+                };
+
+                listing.appendChild(itemRow);
             });
 
-            listing.innerHTML = html || '<div class="loading">No visible files in this directory.</div>';
+            if (listing.children.length === 0) {
+                listing.innerHTML = '<div class="loading">No visible files.</div>';
+            } else {
+                // Clear loading text if it exists
+                const loadingDiv = listing.querySelector('.loading');
+                if(loadingDiv) loadingDiv.remove();
+            }
             updateBreadcrumb();
 
         } catch (err) {
