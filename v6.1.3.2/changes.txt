@@ -1,0 +1,39 @@
+### New Features
+ * **Integrated Firmware Updater**: Firmware updates can now be performed directly within the UI. (Note: A one-time update via VNMFlash is required to enable this functionality.)
+ * **REST API Support (Experimental)**: Added support for remote GUI control via port 9000 to facilitate automation. A Swagger file is included for documentation.
+ * **Multi-Monitor Support**: Users with multiple displays can now specify which monitor the VNM UI will launch on.
+ * **Auto Wheel Detection**: The UI now automatically detects the connected VNM wheel to display the correct model image (active when custom wheel images are disabled).
+ * **Game and Car Profile Assignment (Experimental)**: Users can now link specific games and cars to their profiles. Please note that a plugin upgrade is required to enable this feature. 
+ * Introduced "CustomUIScale" feature with automatic scaling support for low-resolution displays
+
+### User Interface
+  * A complete revamp of the UI layout featuring modernized components for a better user experience.
+  * A rewrite of chart component with animation support (for Pedals and Handbrake)
+
+### Direct Drive
+ * System profiles have been consolidated from 4 down to 1 for simplicity.
+ * Removed the "Force Range" & Reverse Force options.
+ * Resolved a visual glitch where wheel animation desynchronized when clicking "Centerize."
+ * Moved Rename and Delete profile buttons to the profile selection dropdown list
+ * Fixed a false-positive in the configuration change detector triggered when the steering range set to maximum value
+ * Added options in Preferences to disable the circle animation and toggle torque display as a percentage
+ * Improved profile management icons (larger size, hover effects)
+ * Fixed scrollbar issues on the plugin configuration page
+ * Enabled the "Import Plugin Profile" button when no profile is selected
+ * Added a "Reset to Defaults" button for plugin configs
+ * Removed the "Reverse Force" option and temporarily disabled the calibration progress dialog pending for future firmware support
+
+### Bug Fixes & Improvements
+ * Resolved a Profile Manager bug that caused data corruption across profiles when a profile was deleted. 
+ * Implemented packet sending timeouts to prevent application freezes.
+ * Fixed access violations in the Python Plugin Engine under some specific circumstances.
+ * Fixed memory leaks related to bitmap resizing and issues with loading embedded fonts.
+ * Fixed an issue where the Help file failed to display if the app launched in a minimized state.
+ * Fixed a logic error where the "Select Plugin" menu item was incorrectly treated as an active plugin.
+ * Increased the config watcher timer from 200ms to 1000ms to reduce disk I/O activity
+ * Added a preference to toggle device connection notifications and standardized the mouse pointer behavior
+ * Added the "MainForm.ForceHideTabDD" property, allowing the Direct Drive tab to be hidden via Python scripts/plugins
+ * Fixed a bug allowing out-of-bounds values in text entry boxes
+ * Corrected the hover effects on trackbar thumbs
+ * Resolved minor issues with the Profile Manager following the "Game & Car" assignment update
+ * Fixed profile creation failures caused by corrupted persistent key containers (rare case)
