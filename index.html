@@ -13,7 +13,7 @@
         .breadcrumb { font-size: 14px; color: #57606a; margin-top: 5px; }
         .breadcrumb a { color: #0969da; text-decoration: none; font-weight: 500; }
         .file-list { list-style: none; padding: 0; margin: 0; }
-        .file-item { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; padding: 10px 16px; border-bottom: 1px solid #d0d7de; text-decoration: none; color: #24292f; font-size: 14px; cursor: pointer; }
+        .file-item { display: grid; grid-template-columns: 24px 1fr 80px 110px; align-items: center; padding: 10px 16px; border-bottom: 1px solid #d0d7de; text-decoration: none; color: #24292f; font-size: 14px; cursor: pointer; gap: 8px; }
         .file-item:last-child { border-bottom: none; }
         .file-item:hover { background-color: #f6f8fa; color: #0969da; }
         .icon { font-size: 16px; display: flex; justify-content: center; }
@@ -58,6 +58,21 @@
         }
     }
 
+    async function fetchLastCommitDate(path, element) {
+        try {
+            const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/commits?path=${encodeURIComponent(path)}&per_page=1`);
+            const commits = await res.json();
+            if (commits && commits.length > 0) {
+                const date = new Date(commits[0].commit.committer.date);
+                element.innerText = date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+            } else {
+                element.innerText = '-';
+            }
+        } catch (e) {
+            element.innerText = 'n/a';
+        }
+    }
+
     function updateBreadcrumb() {
         const bc = document.getElementById('breadcrumb');
         let html = `<a href="?">root</a>`;
@@ -89,7 +104,7 @@
             }
 
             items.forEach(item => {
-                if (item.name === 'index.html' || item.name === 'CNAME' || item.name.toLowerCase().endsWith('.md')) return;
+                if (['index.html', 'CNAME', 'favicon.ico'].includes(item.name) || item.name.toLowerCase().endsWith('.md')) return;
 
                 const isDir = item.type === 'dir';
                 const icon = isDir ? '📁' : '📄';
@@ -97,7 +112,12 @@
 
                 const itemRow = document.createElement('div');
                 itemRow.className = 'file-item';
-                itemRow.innerHTML = `<span class="icon">${icon}</span><span>${item.name}</span><span class="file-info">${size}</span>`;
+                itemRow.innerHTML = `
+                    <span class="icon">${icon}</span>
+                    <span class="file-name" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.name}</span>
+                    <span class="file-info" style="text-align:right; color:#57606a;">${size}</span>
+                    <span class="file-info date-info" style="text-align:right; color:#57606a;">Loading...</span>
+                `;
                 
                 itemRow.onclick = (e) => {
                     e.preventDefault();
@@ -109,6 +129,7 @@
                 };
 
                 listing.appendChild(itemRow);
+                fetchLastCommitDate(item.path, itemRow.querySelector('.date-info'));
             });
 
             if (listing.children.length === 0) {
