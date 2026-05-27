@@ -1,0 +1,41 @@
+### User Interface
+ * Multilingual support
+  * es.json - Thanks to @tomfuegue 
+  * it.json - Thanks to @gandhialpazoo
+ * Resolved an issue where application icon not shown on the taskbar
+ * Improved auto scaling feature to support multiple display resolutions and orientation
+ * Added tutorial engine (application guide/tour will be added later with this)
+
+### Direct Drive
+ * Added a feature allowing users to bind a wheel image to a specific profile (Create a profile, then right click on the current wheel image to assign/remove custom wheel image for that profile)
+ * Improved and Re-enabled calibration dialog (use the latest firmware version for this to work)
+ * Improved wheelbase packet handling to avoid UI freezing when being dragged
+ * Fixed Game & Car detection issue resulting in broken car based profile selection
+
+### Steering Wheel
+ * Added button led controller. Now you can control the button leds from VNM SimCenter (firmware update required)
+ * Added VNM GT wheel v2 support
+
+### Motion
+ * Increased maximum actuator stroke length to 450
+
+### Plugins
+ * Latest vnmtelemetry.dll is now shipped with the app (will be automatically installed if there are no other installed versions) 
+ * Update plugin selector logic to ignore the header
+
+### Firmware Updater
+ * Implemented a 5 second timeout when clicking abort on firmware update form
+ * Press control while clicking update firmware will enter builtin DFU mode
+ * Reduced flickering issue on firmware update form
+
+### REST API
+ * Added /api/control/status api to return current values of registered controls
+ * Exposed ModificationRateLimit config under RestServer section
+
+### Other bug Fixes & Improvements
+ * Fixed the precision drift when converting values between 16bit and 7bit back and forth
+ * Improved joystick capturing procedure to reduce performance impact
+ * Fixed duplicated font loading issue
+ * Fixed an issue in plugin config interface where labels are not synced with their bound controls when scrolling
+ * Attempted to fix a random access violation when enabling toggles
+ * Fixed a case where the device is properly registered with Windows but not registered on VNM SimCenter

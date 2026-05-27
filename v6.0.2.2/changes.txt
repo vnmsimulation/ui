@@ -1,0 +1,14 @@
+Update Highlights
+ - DirectDrive
+  - Enforced a minimum bumpstop range based on the current steering angle
+  - Fixed an issue where imported profiles were not saved correctly and could impact existing profiles
+  - Fixed default profile renaming bug introduced in the previous release
+  - Fixed a race condition that cause a profile swapping issue (affecting default profiles only)
+  - Fixed an issue with steering angle not properly synced with the animation angle
+  - Applied some minor adjustments & improvements
+ - WheelBase (DYI)
+  - Fixed an issue where wheel animations were not working
+  - Updated the user interface
+ - Plugin System
+  - Fixed incorrect plugin UI rendering issues when switching between plugins
+  - Optimized plugin store loading and plugin install/uninstall procedures

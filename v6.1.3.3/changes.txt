@@ -1,0 +1,6 @@
+### Bug fixes and improvements
+ * Added hovering effects to range sliders
+ * Improved auto scaling feature to support multiple screen resolution/scale (Recommended scaling: 100-150%, FullHD or higher)
+ * Update notification not shown when Disable device notifications turned on
+ * Resolved some bugs in the auto upgrader component (hopefully to fix the update stuck issue)
+ 
