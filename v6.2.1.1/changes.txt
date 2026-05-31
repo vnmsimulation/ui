@@ -1,0 +1,31 @@
+VNM SimCenter v6.2.1.1 released
+
+### New features
+ * VNM Sim Center MCP is now available at /mcp endpoint (experimental). You can add it to your favourite AI agent to control the app. Current available tools:
+    * getControlList: Returns a list of all registered logical control IDs and their display labels
+    * getAllControlStatus: Returns the current labels and values for all registered controls (excluding buttons)
+    * getControlState: Retrieves the current value, type, items (if applicable), and supported actions for a control ID
+    * executeAction: Performs an action (set, inc, dec, click, select) on a specific control
+    * more tools will be added in the future
+
+Here is a sample Antigravity config (mcp_config.json):
+{
+  "mcpServers": {
+    "vnm-simcenter": {
+      "url": "http://localhost:900-/mcp"
+    }
+  }
+}
+
+### User Interface
+* Fixed a critical bug that was introduced in an unused feature
+
+### Software Updater
+* Replaced the internal downloader to address persistent upgrade-freezing issues reported by some users
+
+### Steering Wheel
+ * Fixed a critical bug where enabling pre-defined led settings will cause a crash
+ * Fix VNM GT wheel v2 registration issue
+
+Manual upgrade can be downloaded from here:
+https://update.vnmsimulation.com/?path=v6.2.1.1
