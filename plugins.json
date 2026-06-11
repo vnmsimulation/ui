@@ -6,7 +6,7 @@
    "name": "Auto"
   },
   {
-   "version": "0.0.74",
+   "version": "0.2.11",
    "path": "plugins/VnmTelemetry.dll",
    "name": "VnmTelemetry"
   }
