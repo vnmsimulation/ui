@@ -1,0 +1,57 @@
+VNM SimCenter v6.3.0.1 released.
+
+### New features
+ * Backup management: Users can now back up SimCenter data locally or to Google Drive. Navigate to Menu>Tools>Backup Management to use the feature)
+ * Quick screenshot: Automatically captures and stitches active pages (including subpages) into a single, easily shareable image. The output image is stored in clipboard. Hotkey: Ctrl+Shift+F12 (Or navigate to Menu>Tools>Quick Screenshot)
+ * DirectDrive and telemetry profile linking (open the Telemetry page, select a profile, and click "Link" button to bind it to the active DirectDrive profile)
+ * Multi car binding: Users can now bind multiple cars to one DirectDrive profile
+
+### DirectDrive
+ * Advanced page: Removed filter sliders and added 4 other new options (Static Force Reduction Ratio/Static Force Reduction Rate/Force Rate Threshold/Force Rate Limit) --> firmware upgrade is required
+ * Added extra info when showing directdrive errors
+ * Serialized DirectDrive packet requests
+
+### Handbrake/Pedals
+ * Fixed an issue where chart data not properly updated 
+
+### Firmware Updater
+ * Fixed an issue where VNM DFU device not properly removed from the list
+
+### MCP and API
+ * Added some more new mcp tools (use tools/list for the full tool list)
+ * Added /docs endpoint for Swagger documentation
+ * Updated api/control/id api to return range values
+ * Added DirectDrive save button to api/control/list
+
+### Interface
+ * Added connected indicator on tab header when there are devices detected
+ * Added Tools menu
+ * Adjusted the dialog message size calculation logic
+ * Added Restore menu item to system tray popup
+ * Improved button effect to avoid Out of system resources exception
+
+## Plugins
+ * Improved plugin manager
+ * Bundled VNM Telemetry plugin version 0.2.16
+ * Fixed an issue where plugin reload loses the active selection
+ * Auto selected VNM Telemetry if none selected
+ * Base/DirectDrive checkbox is now enabled by default
+
+## Languages
+ * Added multiple strings to the master language file
+ * Added Hungarian translation
+
+### Bug fixes and Improvements
+ * Auto-detects the active game and car upon refresh for supported titles
+ * Refined the auto-scaling feature
+ * Fixed random crash on wheel page
+ * Fixed a rare issue causing an access violation exception when switching to DirectDrive page
+ * Fixed firmware update check logic to properly hide update avaiable icon
+ * Fixed a crash issue when rendering fonts using GDI+
+ * Improved exit on window shutdown handler
+ * Fixed an issue where the joystick capturer unexpectedly stopped whenever any device was disconnected
+ * Added packet retry logic to handle timeout occurrences
+
+Manual upgrade can be downloaded from here:
+https://update.vnmsimulation.com/?path=v6.3.0.1
+
