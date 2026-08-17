@@ -1,0 +1,11 @@
+VNM SimCenter v6.3.0.2 released.
+
+### DirectDrive
+ * Added DirectDrive firmware version check to enable/disable Static Force Reduction Ratio/Static Force Reduction Rate/Force Rate Threshold/Force Rate Limit sliders
+
+### Bug fixes
+ * Fix an issue where exception raised when Exit on Windows shutdown option is enabled
+
+Manual upgrade can be downloaded from here:
+https://update.vnmsimulation.com/?path=v6.3.0.2
+
